@@ -2,7 +2,15 @@
 
 A mock REST API for Order Management System. Contract-first API (OpenAPI 3.0) with in-memory storage - no database required.
 
+[![Swagger UI](https://img.shields.io/badge/Swagger-API%20Docs-blue)](http://98.91.199.104:3000/api-docs/)
+
+This API is deployed on an AWS EC2 instance (public IP: `98.91.199.104`).
+
+Swagger docs (deployed): http://98.91.199.104:3000/api-docs/
+
 ## Quick Start
+
+Runs locally
 
 ```bash
 npm install
@@ -10,6 +18,8 @@ npm start
 ```
 
 Server runs on `http://localhost:3000`. API docs by swagger available at `/api-docs`.
+
+Note: The deployed demo accepts any Bearer token and is intended for development/testing only. Do not use for sensitive or production data.
 
 ## Endpoints
 
@@ -61,15 +71,23 @@ Status codes: `400` (Bad Request), `401` (Unauthorized), `404` (Not Found), `500
 2. Open http://localhost:3000/api-docs
 3. Click "Authorize" → enter any token → test endpoints
 
+Alternatively, view the live docs at: http://98.91.199.104:3000/api-docs/
+
 ### Using Postman
 
-**Option: Import OpenAPI Spec**
+** Import the included Postman collection**
 
 1. Open Postman
-2. Click **Import** button
-3. Select `openapi.yaml` file
-4. Postman will auto-generate a collection
-5. Set Authorization: Collection → Variables → `bearer_token` = `test-token`
+2. Click Import → File and choose `postman_collection.json` from this repo
+3. The collection "Mock Order API" will be added to your workspace
+4. Open the collection's variables (or the environment) and set:
+
+- `baseUrl` = `http://98.91.199.104:3000/api/v1` (or `http://localhost:3000/api/v1` for local testing)
+- `bearer_token` = `test-token`
+
+5. Select a request, click "Send". The collection uses `{{baseUrl}}` and Bearer auth.
+
+Alternatively, you can still import `openapi.yaml` if you prefer generating the collection from the spec.
 
 ## Notes
 

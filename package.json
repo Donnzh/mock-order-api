@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp openapi.yaml dist/src/openapi.yaml",
     "start": "nodemon ./src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch"
