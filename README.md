@@ -2,11 +2,11 @@
 
 A mock REST API for Order Management System. Contract-first API (OpenAPI 3.0) with in-memory storage - no database required.
 
-// [![Swagger UI](https://img.shields.io/badge/Swagger-API%20Docs-blue)](http://98.91.199.104:3000/api-docs/)
+[![Swagger UI](https://img.shields.io/badge/Swagger-API%20Docs-blue)](http://98.91.199.104:3000/api-docs/)
 
-// This API is deployed on an AWS EC2 instance (public IP: `98.91.199.104`).
+This API is deployed on an AWS EC2 instance (public IP: `98.91.199.104`).
 
-// Swagger docs (deployed): http://98.91.199.104:3000/api-docs/
+Swagger docs (deployed): http://98.91.199.104:3000/api-docs/
 
 ## Quick Start
 
@@ -71,7 +71,7 @@ Status codes: `400` (Bad Request), `401` (Unauthorized), `404` (Not Found), `500
 2. Open http://localhost:3000/api-docs
 3. Click "Authorize" → enter any token → test endpoints
 
-// Alternatively, view the live docs at: http://98.91.199.104:3000/api-docs/
+Alternatively, view the live docs at: http://98.91.199.104:3000/api-docs/
 
 ### Using Postman
 
